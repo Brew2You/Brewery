@@ -8,7 +8,7 @@ namespace Brewery.Store.Library.Interfaces
     public interface IRepository<T>
     {
         List<T> GetAll();
-        T GetById();
+        T GetById(int id);
         void Create(T t);
         void Update(T t);
         void Delete(T t);
