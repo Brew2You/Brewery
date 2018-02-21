@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StoreService } from './store.service';
+import { Beer } from './beer';
 
 @Component({
   selector: 'app-store',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoreComponent implements OnInit {
 
-  constructor() { }
+  beers: Beer[];
+
+  constructor(private _storeService: StoreService) { }
 
   ngOnInit() {
+    this.getInventory();
+  }
+
+  getInventory() {
+    this._storeService.getInventory().then((beers: any) => this.beers = beers);
   }
 
 }
