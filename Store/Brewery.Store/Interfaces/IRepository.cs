@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Brewery.Store.Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,8 +9,8 @@ namespace Brewery.Store.Library.Interfaces
     {
         List<T> GetAll();
         T GetById();
-        void Create();
-        void Update();
-        void Delete();
+        void Create(T t);
+        void Update(T t);
+        void Delete(T t);
     }
 }
