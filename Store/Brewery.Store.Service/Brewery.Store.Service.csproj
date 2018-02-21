@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Brewery.Store.Context\Brewery.Store.Context.csproj" />
     <ProjectReference Include="..\Brewery.Store\Brewery.Store.Library.csproj" />
   </ItemGroup>
 
