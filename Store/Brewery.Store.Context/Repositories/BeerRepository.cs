@@ -2,6 +2,7 @@
 using Brewery.Store.Library.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Brewery.Store.Context.Repositories
@@ -17,27 +18,27 @@ namespace Brewery.Store.Context.Repositories
 
         public void Create(Beer beer)
         {
-            _context.Add(beer);
+            _context.Beer.Add(beer);
         }
 
         public void Delete(Beer beer)
         {
-            throw new NotImplementedException();
+            _context.Beer.Remove(beer);
         }
 
         public List<Beer> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Beer.ToList();
         }
 
-        public Beer GetById()
+        public Beer GetById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Beer.Find(id);
         }
 
         public void Update(Beer beer)
         {
-            throw new NotImplementedException();
+            _context.Beer.Update(beer);
         }
     }
 }
