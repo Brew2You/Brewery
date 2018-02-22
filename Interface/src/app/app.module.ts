@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { StoreRoutingModule } from '../store/store-routing.module';
-import { StoreModule } from '../store/store.module';
+import { StoreRoutingModule } from './store/store-routing.module';
+import { StoreModule } from './store/store.module';
+import { WelcomeModule } from './Welcome/welcome.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { StoreModule } from '../store/store.module';
     AppRoutingModule,
     BrowserModule,
     StoreModule,
-    StoreRoutingModule
+    StoreRoutingModule,
+    WelcomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
