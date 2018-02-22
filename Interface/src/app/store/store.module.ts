@@ -6,11 +6,12 @@ import { BeerComponent } from './beer/beer.component';
 import { BeerService } from './beer/beer.service';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreRoutingModule } from './store-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    AppRoutingModule,
+    StoreRoutingModule,
     RouterModule,
     HttpClientModule
   ],

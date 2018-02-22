@@ -5,7 +5,9 @@ import { WelcomeComponent } from '../welcome/welcome.component';
 const routes: Routes = [
   {
     path: '', component: WelcomeComponent, children: [
-      {}
+      {
+        path: 'store', loadChildren: 'app/store/store.module#StoreModule'
+      }
     ]
   }
 ];
