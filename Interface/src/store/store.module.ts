@@ -1,22 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreComponent } from './store.component';
-import { StoreService } from './store.service';
 import { AppRoutingModule } from '../app/app-routing.module';
+import { BeerComponent } from './beer/beer.component';
+import { BeerService } from './beer/beer.service';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    HttpClientModule
   ],
   exports: [
-    StoreComponent
+    StoreComponent,
+    BeerComponent
   ],
   providers: [
-    StoreService
+    BeerService
   ],
   declarations: [
-    StoreComponent
+    StoreComponent,
+    BeerComponent
   ]
 })
 export class StoreModule { }
