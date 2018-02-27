@@ -1,4 +1,9 @@
-<p>
-  dashboard works!
-</p>
+<mat-sidenav-container>
+  <mat-sidenav>Start</mat-sidenav>
+  <mat-sidenav-content>
+    <a *ngFor="let option of sideNavOptions" mat-list-item [routerLink]="option.optionRoute">
+      <span>{{option.optionName}}</span>
+    </a>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 <router-outlet></router-outlet>
