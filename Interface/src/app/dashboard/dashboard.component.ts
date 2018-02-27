@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DashboardOptions } from './dashboardOptions';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +10,15 @@ export class DashboardComponent implements OnInit {
 
   constructor() { }
 
+  @Input() sideNavOptions: DashboardOptions[];
+
   ngOnInit() {
+    this.sideNavOptions = [
+      {
+        optionName: 'test',
+        optionRoute: 'store'
+      }
+    ];
   }
 
 }
