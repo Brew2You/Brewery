@@ -4,9 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { StoreModule } from './store/store.module';
-import { WelcomeModule } from './Welcome/welcome.module';
-import { WelcomeRoutingModule } from './welcome-routing/welcome-routing.module';
+// import { WelcomeModule } from './Welcome/welcome.module';
+// import { WelcomeRoutingModule } from './welcome-routing/welcome-routing.module';
 import { StoreRoutingModule } from './store/store-routing.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { StoreRoutingModule } from './store/store-routing.module';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    WelcomeModule
+    DashboardModule
+    // WelcomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
