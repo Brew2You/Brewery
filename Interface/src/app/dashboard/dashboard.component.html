@@ -1,9 +1,14 @@
-<mat-sidenav-container>
-  <mat-sidenav>Start</mat-sidenav>
-  <mat-sidenav-content>
-    <a *ngFor="let option of sideNavOptions" mat-list-item [routerLink]="option.optionRoute">
-      <span>{{option.optionName}}</span>
-    </a>
-  </mat-sidenav-content>
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav class="sidenav">
+    <mat-nav-list>
+        <a *ngFor="let option of sideNavOptions" mat-list-item [routerLink]="option.optionRoute">
+          <span>{{option.optionName}}</span>
+        </a>
+    </mat-nav-list>
+  </mat-sidenav>
+    <mat-sidenav-content>
+      <button mat-icon-button (click)="sidenav.open()"><mat-icon>menu</mat-icon></button>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
 </mat-sidenav-container>
-<router-outlet></router-outlet>

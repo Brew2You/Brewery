@@ -1,0 +1,9 @@
+.container {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.sidenav {
+    padding: 5px;
+}
