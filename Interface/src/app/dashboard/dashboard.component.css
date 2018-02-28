@@ -7,3 +7,7 @@
 .sidenav {
     padding: 5px;
 }
+
+.sidenav-item {
+    justify-content: center;
+}
