@@ -10,13 +10,17 @@ export class DashboardComponent implements OnInit {
 
   constructor() { }
 
-  /*@Input()*/ sideNavOptions: DashboardOptions[];
+  sideNavOptions: DashboardOptions[];
 
   ngOnInit() {
     if (!this.sideNavOptions) {
       this.sideNavOptions = [
         {
-          optionName: 'test',
+          optionName: 'Home',
+          optionRoute: ''
+        },
+        {
+          optionName: 'Beer Store',
           optionRoute: 'store'
         }
       ];
